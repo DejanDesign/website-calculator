@@ -1,0 +1,160 @@
+$main-background-querstions: #7bb3e7;
+
+.Questions {
+
+    width: 100vw;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+
+    h2 {
+        color: $main-background-querstions;
+        font-size: 3rem;
+
+    }
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        color: $main-background-querstions;
+        font-size: 2rem;
+        line-height: 1.2em;
+    }
+}
+
+.progress-bar {
+    width: 80%;
+    border: 1px solid rgb(80, 71, 71);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+
+    .bar {
+        background-color: $main-background-querstions;
+        width: 0%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        transition: 1s;
+        border-radius: 20px;
+
+        span {
+            position: relative;
+            margin-left: 35px;
+
+        }
+    }
+}
+
+
+
+
+
+.Content_img {
+    position: relative;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    height: 11em;
+    border-top-left-radius: 1.875rem;
+    border-bottom-right-radius: 1.875rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 40%;
+    height: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .imgBack {
+        position: absolute;
+        width: 100%;
+
+    }
+
+
+    .imgMain {
+
+        width: auto;
+        transition: 1s;
+        animation: 1s imgAnimation infinite linear;
+
+        @keyframes imgAnimation {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.03);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    flex-wrap: wrap;
+
+    button {
+        margin: 0.5em;
+        width: 9rem;
+        height: 3.438rem;
+        border-top-left-radius: 1.875rem;
+        border-bottom-right-radius: 1.875rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        background-color: black;
+        color: white;
+        border: none;
+        outline: none;
+        transition: 0.5s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $main-background-querstions;
+            color: black;
+        }
+
+    }
+
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .Content_img {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .Content_img {
+
+        height: auto !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .Content_img {
+
+
+        .imgMain {
+
+            width: 40%;
+        }
+    }
+}

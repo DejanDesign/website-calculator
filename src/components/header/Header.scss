@@ -1,0 +1,112 @@
+$main-background: linear-gradient(161.18deg, #FFFFFF -1.29%, #C7E4FF 97.17%);
+
+.Header {
+    background: $main-background;
+    height: 5em;
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 230px;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+
+    .header_main {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+
+        .header_main_content {
+            height: 35%;
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                font-size: 1.2rem;
+                color: #7bb3e7;
+                position: relative;
+                right: 0.5em;
+                cursor: default;
+
+                img {
+                    height: 1rem;
+                    width: 1rem;
+                    position: relative;
+                    right: 0.5em;
+                }
+            }
+        }
+    }
+
+    h1 {
+        color: #7bb3e7;
+        font-size: 3rem;
+
+    }
+
+    a {
+        cursor: pointer;
+
+        img {
+            width: 150px;
+            margin-top: 3em;
+            margin-left: 1em;
+        }
+    }
+
+    .restart {
+        cursor: pointer;
+        width: 80px;
+        margin-top: 3em;
+        margin-right: 1em;
+
+    }
+}
+
+
+@media only screen and (max-width: 1080px) {
+    .header_main_content {
+        a {
+            font-size: 1rem !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    h1 {
+        font-size: 2.5rem !important;
+        line-height: 1em;
+
+    }
+
+    .header_main_content {
+        a {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    h1 {
+        font-size: 2rem !important;
+        line-height: 1em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .Header {
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        height: 150px;
+
+        .logoMain {
+            display: none;
+        }
+    }
+}
